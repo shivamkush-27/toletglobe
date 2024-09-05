@@ -1,13 +1,15 @@
 import React from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
+  const onChange = () => {}
   // Disable page reload on form submission
-    const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   }
 
   return (
-    <div className="my-6">
+    <div className="my-3">
       <div className="grid sm:grid-cols-2 items-center gap-x-40 gap-y-10 p-8 mx-auto max-w-7xl text-[#333] font-[sans-serif]">
         <div>
           <h1 className="lg:text-4xl text-xl font-semibold text-white lg:w-5/6">Contact Us, We're Ready to Help!</h1>
@@ -70,14 +72,19 @@ const Contact = () => {
               <input type="email" name="email" id="email" className="mb-2 bg-transparent text-white border border-gray-300 sm:text-sm rounded-sm block w-full p-2.5 py-3 px-4" placeholder="name@company.com" required />
             </div>
           </div>
-          <div className="pb-2">
-            <label for="message" className="inline mb-2 text-sm font-medium text-white">Message</label> 
+          <div className="pb-0">
+            <label for="message" className="inline mb-2 text-sm font-medium text-white">Message</label>
             <span className="block float-right mb-2 text-sm text-gray-500">300 characters</span>
             <div className="relative">
               {/* Message writing area */}
               <textarea name="message" id="message" placeholder="Type your Message..." rows={3} maxlength="300" className="mb-2 bg-transparent text-white border border-gray-300 sm:text-sm rounded-sm block w-full p-2.5 py-3 px-4" />
             </div>
           </div>
+          <ReCAPTCHA
+            sitekey="6Le3ojcqAAAAABYw--yiLX9gqFUXD6iFhRQcpaQd"
+            theme="dark"
+            onChange={onChange}
+          />
           {/* Form Submit button */}
           <button type="submit" className="w-full text-black bg-[#04C4B1] hover:bg-teal-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-6">Submit query</button>
         </form>
