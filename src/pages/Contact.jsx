@@ -1,4 +1,4 @@
-import React from "react";
+
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
@@ -19,7 +19,7 @@ const Contact = () => {
             <ul className="mt-3">
               <li className="flex items-center">
                 <div className="h-10 w-10 rounded-full flex shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-messages-square"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z" /><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-messages-square"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z" /><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" /></svg>
                 </div>
                 <p className="text-white text-sm ml-3">
                   <h4 className="block text-lg font-bold">Chat with us!!</h4>
@@ -34,7 +34,7 @@ const Contact = () => {
             <ul className="flex mt-3 space-x-4">
               <li className="flex items-center">
                 <div className="h-10 w-10 rounded-full flex shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-phone-call"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /><path d="M14.05 2a9 9 0 0 1 8 7.94" /><path d="M14.05 6A5 5 0 0 1 18 10" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone-call"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /><path d="M14.05 2a9 9 0 0 1 8 7.94" /><path d="M14.05 6A5 5 0 0 1 18 10" /></svg>
                 </div>
                 <span className="text-white text-sm ml-3">
                   <h4 className="block text-lg font-bold">Call us...</h4>
@@ -49,7 +49,7 @@ const Contact = () => {
         <form action="" onSubmit={handleSubmit} className="space-y-4">
           <div className="pb-0">
             {/* Dropdown Option */}
-            <label for="topics" className="block mb-2 text-sm font-medium text-white">Topic</label>
+            <label htmlFor="topics" className="block mb-2 text-sm font-medium text-white">Topic</label>
             <select id="topic" required className="bg-transparent border border-gray-300 text-white text-sm rounded-sm block w-full p-2.5">
               <option selected hidden disabled>Select a Topic</option>
               <option value="1">Rental House</option>
@@ -59,25 +59,25 @@ const Contact = () => {
             </select>
           </div>
           <div className="pb-0">
-            <label for="email" className="block mb-2 text-sm font-medium text-white">Name</label>
+            <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Name</label>
             <div className="relative">
               {/* Name Input Field */}
               <input type="text" name="name" id="name" className="mb-2 bg-transparent text-white border border-gray-300 sm:text-sm rounded-sm block w-full p-2.5 py-3 px-4" placeholder="Your Name" required />
             </div>
           </div>
           <div className="pb-0">
-            <label for="email" className="block mb-2 text-sm font-medium text-white">Email</label>
+            <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Email</label>
             <div className="relative">
               {/* Email Input Field */}
               <input type="email" name="email" id="email" className="mb-2 bg-transparent text-white border border-gray-300 sm:text-sm rounded-sm block w-full p-2.5 py-3 px-4" placeholder="name@company.com" required />
             </div>
           </div>
           <div className="pb-0">
-            <label for="message" className="inline mb-2 text-sm font-medium text-white">Message</label>
+            <label htmlFor="message" className="inline mb-2 text-sm font-medium text-white">Message</label>
             <span className="block float-right mb-2 text-sm text-gray-500">300 characters</span>
             <div className="relative">
               {/* Message writing area */}
-              <textarea name="message" id="message" placeholder="Type your Message..." rows={3} maxlength="300" className="mb-2 bg-transparent text-white border border-gray-300 sm:text-sm rounded-sm block w-full p-2.5 py-3 px-4" />
+              <textarea name="message" id="message" placeholder="Type your Message..." rows={3} maxLength="300" className="mb-2 bg-transparent text-white border border-gray-300 sm:text-sm rounded-sm block w-full p-2.5 py-3 px-4" />
             </div>
           </div>
           <ReCAPTCHA
