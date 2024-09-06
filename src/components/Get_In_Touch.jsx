@@ -85,9 +85,11 @@ const Get_In_Touch = () => {
             </p>
           )}
         </div>
+        <NavLink to='/contact'>
           <button type="submit" className="text-[#bda92a] text-lg font-semibold">
             Send Message →
           </button>
+        </NavLink>
       </form>
     </div>
   );
