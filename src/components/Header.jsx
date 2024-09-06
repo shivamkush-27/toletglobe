@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from '../assets/to_let_globe_logo.jpeg'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 flex justify-between items-center">
         <NavLink to="/">
           <img
-            src="/public/to_let_globe_logo.jpeg"
+            src={logo}
             alt="to-let-globe"
             width={70}
             height={70}
