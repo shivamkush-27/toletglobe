@@ -18,15 +18,34 @@ const Get_In_Touch = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
   });
 
   // Handle form submission
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch('https://toletglobe-ge7g.onrender.com/api/forms/get_in_touch', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert('Form submitted successfully');
+        reset();
+      } else {
+        alert('Failed to submit form');
+      }
+    } catch (error) {
+      alert('Error submitting form');
+    }
   };
+
 
   return (
     <div className="max-w-md mx-auto p-6 text-white bg-black">
@@ -85,11 +104,9 @@ const Get_In_Touch = () => {
             </p>
           )}
         </div>
-        <NavLink to='/contact'>
-          <button type="submit" className="text-[#bda92a] text-lg font-semibold">
-            Send Message →
-          </button>
-        </NavLink>
+        <button type="submit" className="text-[#bda92a] text-lg font-semibold">
+          Send Message →
+        </button>
       </form>
     </div>
   );
